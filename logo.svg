@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" role="img" aria-label="FlexArray">
+  <!-- 3x3 grid: squares = F, circles = A. Overlap = circle inside square. (for dark backgrounds) -->
+  <g fill="#79b8ff">
+    <rect x="2"   y="2"   width="5" height="5" rx="1.4"/>
+    <rect x="17"  y="2"   width="5" height="5" rx="1.4"/>
+    <rect x="9.5" y="2"   width="5" height="5" rx="1.4"/>
+    <rect x="2"   y="9.5" width="5" height="5" rx="1.4"/>
+    <rect x="9.5" y="9.5" width="5" height="5" rx="1.4"/>
+    <rect x="2"   y="17"  width="5" height="5" rx="1.4"/>
+  </g>
+  <g fill="#7fe3cf">
+    <circle cx="12"   cy="4.5"  r="1.55"/>
+    <circle cx="4.5"  cy="12"   r="1.55"/>
+    <circle cx="12"   cy="12"   r="1.55"/>
+    <circle cx="4.5"  cy="19.5" r="1.55"/>
+    <circle cx="19.5" cy="12"   r="2.4"/>
+    <circle cx="19.5" cy="19.5" r="2.4"/>
+  </g>
+  <rect x="9.5" y="17" width="5" height="5" rx="1.4" fill="#33425a"/>
+</svg>

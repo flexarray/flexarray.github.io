@@ -1,0 +1,153 @@
+/* FlexArray — careers site (stealth) */
+:root{
+  --bg:#070b12;
+  --panel:#0d1521;
+  --panel-2:#101b2b;
+  --border:rgba(125,165,235,.14);
+  --border-strong:rgba(125,165,235,.28);
+  --text:#e9eef7;
+  --muted:#94a3b8;
+  --faint:#5f6e84;
+  --accent:#79b8ff;
+  --accent-2:#7fe3cf;
+  --accent-glow:rgba(121,184,255,.18);
+  --maxw:980px;
+  --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--text);font-family:var(--sans);
+  line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:
+    radial-gradient(900px 520px at 50% -180px,var(--accent-glow),transparent 70%),
+    linear-gradient(transparent 0 31px,rgba(125,165,235,.035) 31px 32px),
+    linear-gradient(90deg,transparent 0 31px,rgba(125,165,235,.035) 31px 32px);
+  background-size:auto,32px 32px,32px 32px;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(7,11,18,.72);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px;color:var(--text)}
+.brand:hover{text-decoration:none}
+.brand svg,.brand img{display:block}
+.mark img{display:block}
+.brand b{font-weight:750}
+.nav-links{display:flex;align-items:center;gap:22px}
+.nav-links a{color:var(--muted);font-size:14px}
+.nav-links a:hover{color:var(--text);text-decoration:none}
+.btn{display:inline-flex;align-items:center;gap:8px;border-radius:10px;padding:10px 16px;font-weight:600;font-size:14px;border:1px solid var(--border-strong);transition:.15s}
+.btn-primary{background:linear-gradient(180deg,#8cc2ff,#5b9dff);color:#06101f;border-color:transparent}
+.btn-primary:hover{filter:brightness(1.07);text-decoration:none}
+.btn-ghost{background:transparent;color:var(--text)}
+.btn-ghost:hover{border-color:var(--accent);color:#fff;text-decoration:none}
+
+/* hero */
+.hero{padding:84px 0 56px;text-align:left}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);display:flex;align-items:center;gap:10px;margin:0 0 22px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 0 0 rgba(127,227,207,.6);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(127,227,207,.45)}70%{box-shadow:0 0 0 9px rgba(127,227,207,0)}100%{box-shadow:0 0 0 0 rgba(127,227,207,0)}}
+h1{font-size:clamp(34px,5.4vw,58px);line-height:1.05;letter-spacing:-.02em;margin:0 0 22px;font-weight:760;max-width:18ch}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:62ch;margin:0 0 30px}
+.lede strong{color:var(--text);font-weight:600}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+
+/* sections */
+section{padding:46px 0;border-top:1px solid var(--border)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--faint);margin:0 0 14px}
+h2{font-size:clamp(22px,3vw,30px);letter-spacing:-.01em;margin:0 0 18px;font-weight:720}
+p.body{color:var(--muted);max-width:64ch}
+p.body strong{color:var(--text);font-weight:600}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:26px}
+.pillar{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);border-radius:14px;padding:20px}
+.pillar h3{margin:0 0 8px;font-size:16px}
+.pillar p{margin:0;color:var(--muted);font-size:14.5px}
+
+/* roles */
+.roles{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+.role-card{position:relative;display:block;background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);border-radius:16px;padding:22px 22px 20px;transition:.18s;color:var(--text)}
+.role-card:hover{border-color:var(--border-strong);transform:translateY(-2px);text-decoration:none;box-shadow:0 14px 40px -22px rgba(121,184,255,.5)}
+.role-card .tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2)}
+.role-card h3{margin:8px 0 8px;font-size:19px;letter-spacing:-.01em}
+.role-card p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+.role-card .go{font-size:14px;color:var(--accent);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 16px}
+.chip{font-size:11.5px;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:3px 10px;background:rgba(125,165,235,.05)}
+
+/* offer list */
+.offer{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 28px;margin-top:8px;list-style:none;padding:0}
+.offer li{display:flex;gap:12px;color:var(--muted)}
+.offer .ic{color:var(--accent);flex:0 0 auto;margin-top:3px}
+.offer b{color:var(--text);font-weight:600}
+
+/* plain list (What We Offer) */
+.list{margin:0;padding-left:20px;color:var(--muted);max-width:66ch}
+.list li{margin:10px 0}
+.list li::marker{color:var(--accent)}
+.label{font-weight:700;color:var(--text)}
+.email-link{font-family:var(--mono);font-size:14px}
+
+/* big front-page banner */
+html,body{overflow-x:hidden}
+.banner{text-align:center;padding:90px 0 14px}
+.banner .mark{display:flex;justify-content:center;margin-bottom:18px}
+.banner-name{font-size:clamp(46px,13vw,118px);line-height:.92;letter-spacing:-.035em;font-weight:800;margin:0}
+.banner-name b{font-weight:800;color:var(--accent)}
+.landing{max-width:680px;margin:0 auto;text-align:center;padding:0 0 64px}
+.landing .lede{margin:0 auto 22px}
+.landing .hero-cta{justify-content:center}
+.hiring{font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.01em;margin:0 0 18px}
+
+/* linear positions list */
+.role-list{margin-top:6px;border-top:1px solid var(--border)}
+.role-item{display:block;padding:22px 6px;border-bottom:1px solid var(--border);color:var(--text);transition:.15s}
+.role-item:hover{background:rgba(125,165,235,.05);text-decoration:none}
+.role-item h3{margin:0 0 7px;font-size:18px;display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.role-item h3 .arrow{color:var(--accent);font-weight:600;font-size:14px;flex:0 0 auto}
+.role-item p{margin:0;color:var(--muted);font-size:14.5px;max-width:82ch}
+
+/* apply band */
+.band{background:linear-gradient(180deg,var(--panel),#0b1320);border:1px solid var(--border-strong);border-radius:18px;padding:34px;text-align:center;margin-top:8px}
+.band h2{margin-bottom:10px}
+.band p{color:var(--muted);max-width:54ch;margin:0 auto 22px}
+
+/* role page */
+.role-hero{padding:60px 0 30px}
+.crumb{font-size:13.5px;color:var(--faint);margin-bottom:22px}
+.crumb a{color:var(--muted)}
+.role-hero h1{font-size:clamp(28px,4.4vw,44px);max-width:22ch}
+.role-meta{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 26px}
+.block{padding:28px 0;border-top:1px solid var(--border)}
+.block h2{font-size:20px}
+.block ul{margin:0;padding-left:20px;color:var(--muted);max-width:70ch}
+.block ul li{margin:9px 0}
+.block ul li::marker{color:var(--accent)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+
+/* footer */
+footer{border-top:1px solid var(--border);padding:34px 0 60px;color:var(--faint);font-size:13.5px}
+.foot-inner{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;align-items:center}
+.foot-inner .stealthline{font-family:var(--mono);letter-spacing:.04em}
+
+@media(max-width:760px){
+  .roles,.pillars,.offer,.two{grid-template-columns:1fr}
+  .nav-inner{flex-wrap:wrap;row-gap:10px}
+  .nav-links a:not(.btn){display:none}
+  .hero{padding:54px 0 36px}
+  .banner{padding:48px 0 10px}
+  .role-item{padding:18px 2px}
+  .role-hero{padding:44px 0 24px}
+  .block{padding:22px 0}
+  .wrap{padding:0 18px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.dot{animation:none}.role-card:hover{transform:none}
+}

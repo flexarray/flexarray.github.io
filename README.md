@@ -1,2 +1,0 @@
-# flexarray-site
-Flexarray Site
