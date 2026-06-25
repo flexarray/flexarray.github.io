@@ -1,4 +1,4 @@
-/* FlexArray — careers site (stealth) */
+/* FlexArray - careers site (stealth) */
 :root{
   --bg:#070b12;
   --panel:#0d1521;
@@ -98,13 +98,17 @@ p.body strong{color:var(--text);font-weight:600}
 /* big front-page banner */
 html,body{overflow-x:hidden}
 .banner{text-align:center;padding:90px 0 14px}
-.banner .mark{display:flex;justify-content:center;margin-bottom:18px}
+.banner .mark{display:flex;justify-content:center;margin-bottom:10px}
+.banner .mark img{width:clamp(50px,14vw,128px);height:auto;display:block}
 .banner-name{font-size:clamp(46px,13vw,118px);line-height:.92;letter-spacing:-.035em;font-weight:800;margin:0}
 .banner-name b{font-weight:800;color:var(--accent)}
 .landing{max-width:680px;margin:0 auto;text-align:center;padding:0 0 64px}
 .landing .lede{margin:0 auto 22px}
 .landing .hero-cta{justify-content:center}
 .hiring{font-size:clamp(20px,3vw,26px);font-weight:700;letter-spacing:-.01em;margin:0 0 18px}
+
+/* hiring note under Open Positions */
+.positions-note{color:var(--muted);max-width:64ch;margin:0 0 20px;font-size:15.5px}
 
 /* linear positions list */
 .role-list{margin-top:6px;border-top:1px solid var(--border)}
